@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omega-portfolio-engine"
+version = "0.1.0"
+description = "Production-hardened hybrid (classical + feature-flagged quantum) multi-asset portfolio construction engine with hard compliance gating and audit manifests."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "hastikacheddy", email = "hastikacheddy06@gmail.com" }]
+dependencies = [
+  "numpy>=1.26,<3",
+  "scipy>=1.11",
+  "pandas>=2.0",
+  "cvxpy>=1.4",
+  "ecos>=2.0.12",
+  "osqp>=0.6",
+  "qiskit>=1.4,<3",
+]
+
+[project.optional-dependencies]
+quantum = ["qiskit-aer>=0.15", "qiskit-algorithms>=0.3"]  # ZNE + optimizer
+test = ["pytest>=7.4"]
+
+[project.scripts]
+omega-engine = "omega_engine.cli:main"
+
+[tool.setuptools]
+packages = ["omega_engine"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
