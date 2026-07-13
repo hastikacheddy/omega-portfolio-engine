@@ -64,4 +64,29 @@ print(result.summary())             # raises EngineComplianceError on breach
 3. Full audit manifest per run; deterministic under a fixed seed.
 4. Quantum failures degrade to the exact classical z-update, logged.
 
+## Author
+
+- **hastikacheddy** ([github.com/hastikacheddy](https://github.com/hastikacheddy)) — hastikacheddy06@gmail.com
+- Solo submission.
+
+Research repository (challenge submission with deck, formulation, dashboards,
+and adversarial benchmark):
+[wiser-vanguard-quantum](https://github.com/hastikacheddy/wiser-vanguard-quantum).
+
+## Credits & attribution
+
+**Data.** The committed ETF price snapshot ([data/etf_prices.csv](data/etf_prices.csv))
+is daily adjusted closes retrieved once from **Yahoo Finance** via the
+[`yfinance`](https://github.com/ranaroussi/yfinance) library, for research
+demonstration only.
+
+**Open-source tools.** [Qiskit](https://www.ibm.com/quantum/qiskit) /
+Qiskit Aer / Qiskit Algorithms · [CVXPY](https://www.cvxpy.org/)
+(Clarabel/OSQP/ECOS/SCS) · [NumPy](https://numpy.org/),
+[SciPy](https://scipy.org/), [pandas](https://pandas.pydata.org/).
+
+**Methods.** HRP — López de Prado (2016) · Dicke states — Bärtschi &
+Eidenbenz (arXiv:1904.07358) · ADMM — Boyd et al. (2011) · CVaR —
+Rockafellar & Uryasev (2000).
+
 MIT license. Version 0.1.0 — see [CHANGELOG.md](CHANGELOG.md).
